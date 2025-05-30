@@ -106,7 +106,7 @@ const main = async () => {
 
     case 'Clear Completed Tasks': {
       const tasks = listTasks() 
-      const completedTasks = tasks.filter(t => t.status === 'completed')
+      const completedTasks = tasks.filter(t => t.completed === true)
       if (completedTasks.length === 0) {
         console.log(chalk.red('There is no completed tasks to clear.'))
         break
